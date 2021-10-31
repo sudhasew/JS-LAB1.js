@@ -16,8 +16,8 @@ const lifeEvents = [
   "I came to the United States when I was 22 years old.",
   "I'm graduated from Bachelors degree in Electronics.",
 ];
-for (let i = 0; i < lifeEvents.length; i++) {
-  console.log(lifeEvents[i]);
+for (const lifeEvent of lifeEvents) {
+  console.log(lifeEvent);
 }
 if (person.pineapplePizza) {
   console.log(
