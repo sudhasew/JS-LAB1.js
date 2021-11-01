@@ -39,7 +39,7 @@ while (true) {
   } else {
     counter++;
     console.log(
-      `5 === 5. It took ${counter} iterations to randomly generate the number 5.`
+      `5 === 5. It took ${counter} iterations to randomly generate the number 5`
     );
     break;
   }
