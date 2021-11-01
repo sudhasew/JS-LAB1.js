@@ -3,7 +3,7 @@ const person = {
   name: "Sudha Vallabhapurapu",
   age: 30,
   birthday: "August 14",
-  pineapplePizza: false,
+  pineapplePizza: true,
 };
 console.log(
   `My name is ${person.name} and I like pineapples on  pizza. I 
@@ -33,10 +33,9 @@ am currently ${person.age} years old and my birthday is on ${person.birthday}.`
 var counter = 0;
 while (true) {
   const randomNumber = Math.floor(Math.random() * 11);
-  console.log(randomNumber);
   if (randomNumber !== 5) {
     counter++;
-    console.log("randomNumber !== 5");
+    console.log(`${randomNumber} !== 5`);
   } else {
     counter++;
     console.log(
