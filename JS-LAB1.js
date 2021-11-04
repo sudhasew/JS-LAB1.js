@@ -1,14 +1,8 @@
 const prompt = require("prompt-sync")();
-const person = {
-  name: "Sudha Vallabhapurapu",
-  age: 30,
-  birthday: "August 14",
-  pineapplePizza: true,
-};
-console.log(
-  `My name is ${person.name} and I like pineapples on  pizza. I 
-am currently ${person.age} years old and my birthday is on ${person.birthday}.`
-);
+const name = "Sudha Vallabhapurapu";
+const age = 30;
+const birthday = "August 14";
+const pineapplePizza = true;
 
 const lifeEvents = [
   "I was born in India.",
@@ -19,15 +13,15 @@ const lifeEvents = [
 for (const lifeEvent of lifeEvents) {
   console.log(lifeEvent);
 }
-if (person.pineapplePizza) {
+if (pineapplePizza) {
   console.log(
-    `My name is ${person.name} and I like pineapples on  pizza. I 
-am currently ${person.age} years old and my birthday is on ${person.birthday}.`
+    `My name is ${name} and I like pineapples on  pizza. I 
+am currently ${age} years old and my birthday is on ${birthday}.`
   );
 } else {
   console.log(
-    `My name is ${person.name} and I am not into pineapples on pizza. I 
-am currently ${person.age} years old and my birthday is on ${person.birthday}.`
+    `My name is ${name} and I am not into pineapples on pizza. I 
+am currently ${age} years old and my birthday is on ${birthday}.`
   );
 }
 var counter = 0;
