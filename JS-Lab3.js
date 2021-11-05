@@ -40,22 +40,24 @@ function deleteSubmissionByIndex(array, index) {
 }
 
 function deleteSubmissionByName(array, name) {
-  let foundIndex = array.findIndex((item) => {
+  let foundName = array.findIndex((item) => {
     return item.name === name;
   });
-  if (foundIndex >= 0) {
-    array.splice(foundIndex, 1);
+  if (foundName >= 0) {
+    array.splice(foundName, 1);
   }
 }
+
 function editSubmission(array, index, score) {
   array[index].score = score;
   array[index].passed = score >= 60;
 }
+
 function findSubmissionByName(array, name) {
-  const foundName = array.find((item) => {
+  const foundStudent = array.find((item) => {
     return item.name === name;
   });
-  console.log(foundName);
+  console.log(foundStudent);
 }
 
 function findLowestScore(array) {
@@ -65,7 +67,27 @@ function findLowestScore(array) {
       lowestScore = item.score;
     }
   });
-  console.log("Found Least Score", lowestScore);
+  return lowestScore;
+}
+
+function findHighestScore(array) {
+  let highestScore = array[0];
+  array.forEach((item) => {
+    if (highestScore < item.score) {
+      highestScore = item.score;
+    }
+  });
+  return highestScore;
+}
+
+function findHighestScoreArray(array) {
+  let highestScore = array[0].score;
+  array.forEach((item) => {
+    if (highestScore < item.score) {
+      highestScore = item.score;
+    }
+  });
+  return highestScore;
 }
 
 let averageQuizScore = function findAverageScore(array) {
@@ -76,6 +98,7 @@ let averageQuizScore = function findAverageScore(array) {
   const avg = sum / array.length;
   console.log("Found Average", avg);
 };
+
 function filterPassing(array) {
   let filterdMethods = array.filter((item) => {
     return item.passed == true;
@@ -100,6 +123,11 @@ editSubmission(submissions, 1, 55);
 console.log("Edited Score and index", submissions);
 findSubmissionByName(submissions, "Sudha");
 findLowestScore(submissions);
+console.log(findLowestScore(submissions));
+findHighestScore(submissions);
+console.log(findHighestScore(submissions));
+findHighestScoreArray(submissions);
+console.log(findHighestScoreArray(submissions));
 averageQuizScore(submissions);
 filterPassing(submissions);
 filter90AndAbove(submissions);
