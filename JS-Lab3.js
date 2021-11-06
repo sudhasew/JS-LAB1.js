@@ -113,19 +113,29 @@ function filter90AndAbove(array) {
 
 addSubmissions(submissions, "Sudha", 80, "2021-11-04");
 console.log("Updated extra name", submissions);
+
 deleteSubmissionByIndex(submissions, 1);
 console.log("deleted Joe by index", submissions);
+
 deleteSubmissionByName(submissions, "Jill");
 console.log("Deleted name Jill by name", submissions);
-editSubmission(submissions, 1, 55);
-console.log("Edited Score and index", submissions);
+
+editSubmission(submissions, 1, 60);
+console.log("Edited Score", submissions);
+
 findSubmissionByName(submissions, "Sudha");
+
 findLowestScore(submissions);
 console.log(findLowestScore(submissions));
+
 findHighestScore(submissions);
 console.log(findHighestScore(submissions));
+
 findHighestScoreArray(submissions);
 console.log(findHighestScoreArray(submissions));
+
 averageQuizScore(submissions);
+
 filterPassing(submissions);
+
 filter90AndAbove(submissions);
