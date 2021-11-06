@@ -47,12 +47,10 @@ function deleteSubmissionByName(array, name) {
     array.splice(foundName, 1);
   }
 }
-
 function editSubmission(array, index, score) {
   array[index].score = score;
   array[index].passed = score >= 60;
 }
-
 function findSubmissionByName(array, name) {
   const foundStudent = array.find((item) => {
     return item.name === name;
