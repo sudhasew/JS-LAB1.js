@@ -38,3 +38,25 @@ while (true) {
     break;
   }
 }
+//EXTENDED CHALLENGES
+
+var hours = prompt("How many hours did you work? hrs: ");
+var wages = prompt("How much payment are you getting per hours? $ ");
+var total = 0;
+if (hours <= 40) {
+  total = hours * wages;
+} else if (hours > 40) {
+  var extraHours = hours - 40;
+  var extraWages = extraHours * wages * 1.5;
+  total = 40 * wages + extraWages;
+}
+console.log(total);
+
+var finalIncome = 1000000;
+var weeks = finalIncome / total;
+if (Number.isInteger(weeks)) {
+  weeks = weeks;
+} else {
+  weeks = parseInt(weeks) + 1;
+}
+console.log(weeks);
