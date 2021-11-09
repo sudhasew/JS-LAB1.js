@@ -139,3 +139,10 @@ averageQuizScore(submissions);
 filterPassing(submissions);
 
 filter90AndAbove(submissions);
+
+function createRange(start, end) {
+  console.log(
+    [...Array(end + 1).keys()].filter((value) => end >= value && start <= value)
+  );
+}
+createRange(5, 8);
