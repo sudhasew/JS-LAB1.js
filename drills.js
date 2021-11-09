@@ -135,5 +135,5 @@ const addInterest = (usersIndex, interest) => {
     users[usersIndex].interests = interest;
   }
 };
-addInterest(4, "Coding");
+addInterest(3, "Coding");
 console.log("Added interest to the users array by using index method", users);
