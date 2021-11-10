@@ -140,9 +140,30 @@ filterPassing(submissions);
 
 filter90AndAbove(submissions);
 
+//EXTENDED CHALLENGES
+
 function createRange(start, end) {
   console.log(
     [...Array(end + 1).keys()].filter((value) => end >= value && start <= value)
   );
 }
 createRange(5, 8);
+
+let data = [
+  { key: "a" },
+  { key: "b" },
+  { key: "a" },
+  { key: "a" },
+  { key: "a" },
+  { key: "b" },
+  { key: "c" },
+  { key: "b" },
+  { key: "c" },
+];
+var value = {};
+data.forEach(
+  (countElements = (array) => {
+    value[array.key] = (value[array.key] || 0) + 1;
+  })
+);
+console.log(value);
