@@ -14,7 +14,7 @@ class Room {
     return this.length * this.width;
   }
   getPerimeter() {
-    return 2 * (this.length + this.width);
+    return 2 * this.length + 2 * this.width;
   }
 }
 const room1 = new Room("Sun", 30, 20);
