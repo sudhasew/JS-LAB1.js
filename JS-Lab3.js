@@ -75,7 +75,7 @@ function findHighestScore(array) {
       highestScore = item.score;
     }
   });
-  return highestScore;
+  return highestScore; // It prints the whole array
 }
 
 function findHighestScoreArray(array) {
