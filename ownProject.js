@@ -1,3 +1,40 @@
+function countDown() {
+  for (let i = 5; i > 0; i--) {
+    console.log(i);
+  }
+}
+countDown();
+
+const countUp = (start, end) => {
+  for (let i = start; i <= end; i++) {
+    console.log(i);
+  }
+};
+countUp(10, 20);
+
+function isLong(word) {
+  if (word.length > 10) {
+    for (let i = word.length; i > 10; i++) {
+      word = " " + word;
+      return true;
+    }
+  } else {
+    return false;
+  }
+}
+console.log(isLong("Sudhavallabhapurapu"));
+
+const whatWaterState = (temperature) => {
+  if (temperature <= 32) {
+    console.log("solid");
+  } else if (temperature > 32 && temperature < 212) {
+    console.log("liquid");
+  } else {
+    console.log("gas");
+  }
+};
+whatWaterState(30);
+
 const names = [
   {
     name: "Sudha",
@@ -20,16 +57,16 @@ const names = [
 ];
 console.log(names); //returns array of whole names
 
-function addExtraName(name, age, height) {
+function addExtraName(name, age, height, born) {
   let extraName = {
     name: name,
     age: age,
     height: height,
-    born: 2018,
+    born: born,
   };
   names.push(extraName);
 }
-addExtraName("Nishritha", 3, "3.5ft");
+addExtraName("Nishritha", 3, "3.5ft", 2018);
 console.log("Added nishritha", names);
 
 function youngerAge(names) {
@@ -73,18 +110,57 @@ function deletePersonByName(names, name) {
 deletePersonByName(names, "Chandu");
 console.log("Deleted chandu name by name", names);
 
-addExtraName("Sudha", 30, "5.0ft");
-console.log("Again added sudha", names);
-addExtraName("Chandu", 37, "5.9ft");
-console.log("Again added chandu", names);
+addExtraName("Chandu", 37, "5.9", 1984);
+console.log("Added chandu", names);
 
 function findHighestAgeArray(names) {
-  var maxAge;
-  for (var key in names) {
-    if (!maxAge || names[key].age > maxAge.age) {
-      maxAge = names[key];
+  let elderAge = names[0].age;
+  let eldersAge = names[0];
+  names.forEach((item) => {
+    if (elderAge < item.age) {
+      eldererAge = item.age;
+      eldersAge = item;
     }
-  }
-  return maxAge;
+  });
+  return eldersAge;
 }
-console.log(findHighestAgeArray(names));
+console.log("Highest Age is:", findHighestAgeArray(names));
+
+function findYoungestAgeArray(names) {
+  let youngestAge = names[0].age;
+  let youngersAge = names[0];
+  names.forEach((item) => {
+    if (youngestAge > item.age) {
+      youngestAge = item.age;
+      youngersAge = item;
+    }
+  });
+  return youngersAge;
+}
+console.log("Youngest Age is:", findYoungestAgeArray(names));
+
+function findYoungestHeightArray(names) {
+  let youngestHeight = names[0].height;
+  let youngersHeight = names[0];
+  names.forEach((item) => {
+    if (youngestHeight > item.height) {
+      youngestHeight = item.height;
+      youngersHeight = item;
+    }
+  });
+  return youngersHeight;
+}
+console.log("Youngest height is:", findYoungestHeightArray(names));
+
+function findBiggestHeightArray(names) {
+  let biggestHeight = names[0].height;
+  let biggersHeight = names[0];
+  names.forEach((item) => {
+    if (biggestHeight < item.height) {
+      biggestHeight = item.height;
+      biggersHeight = item;
+    }
+  });
+  return biggersHeight;
+}
+console.log("biggest height is:", findBiggestHeightArray(names));
