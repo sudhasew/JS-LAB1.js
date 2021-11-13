@@ -14,34 +14,36 @@ if (rword === word) {
 }
 
 // Creates a stack
-var Stack = function () {
-  this.count = 0;
-  this.storage = {}; // Empty object
+class Stack {
+  constructor() {
+    this.count = 0;
+    this.storage = {}; // Empty object
 
-  //Adds a value onto  the end of the stack
-  this.push = function (value) {
-    this.storage[this.count] = value;
-    this.count++;
-  };
+    //Adds a value onto  the end of the stack
+    this.push = function (value) {
+      this.storage[this.count] = value;
+      this.count++;
+    };
 
-  //Removes and returns the value at the end of the stack
-  this.pop = function () {
-    if (this.count === 0) {
-      return undefined;
-    }
-    this.count--;
-    var result = this.storage[this.count];
-    delete this.storage[this.count];
-    return result;
-  };
+    //Removes and returns the value at the end of the stack
+    this.pop = function () {
+      if (this.count === 0) {
+        return undefined;
+      }
+      this.count--;
+      var result = this.storage[this.count];
+      delete this.storage[this.count];
+      return result;
+    };
 
-  this.size = function () {
-    return this.count;
-  };
-  this.peek = function () {
-    return this.storage[this.count - 1];
-  };
-};
+    this.size = function () {
+      return this.count;
+    };
+    this.peek = function () {
+      return this.storage[this.count - 1];
+    };
+  }
+}
 var myStack = new Stack();
 
 myStack.push(1);
